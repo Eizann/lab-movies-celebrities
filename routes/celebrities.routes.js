@@ -21,7 +21,6 @@ router.get('/', async (req, res, next) => {
 
 router.post('/create', async (req, res, next) => {
     try {
-        console.log(req.body)
         await CelebrityModel.create(req.body);
         res.redirect('/celebrities');
     } catch(e) {
